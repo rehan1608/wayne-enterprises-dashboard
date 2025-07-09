@@ -1,10 +1,8 @@
-# main.py
-
 import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Create FastAPI app instance
+
 app = FastAPI()
 
 # Configure CORS to allow requests from your Next.js frontend
