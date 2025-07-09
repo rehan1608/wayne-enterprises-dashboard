@@ -1,4 +1,3 @@
-// app/components/DashboardClient.js
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -71,7 +70,6 @@ const ChartContainer = ({ title, children }) => (
 const RevenueChart = ({ data }) => (
     <ChartContainer title="Quarterly Revenue Trends">
         <LineChart data={data} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-            {/* The dataKey here is now "Period" to match the API response */}
             <XAxis dataKey="Period" stroke="#9ca3af" />
             <YAxis stroke="#9ca3af" tickFormatter={(value) => `$${value/1000}B`} />
             <Tooltip contentStyle={{ backgroundColor: '#374151', border: 'none' }} formatter={(value) => `$${value}M`}/>
@@ -84,10 +82,8 @@ const RevenueChart = ({ data }) => (
 const DivisionPerformanceChart = ({ data }) => (
     <ChartContainer title="Profit by Division">
         <BarChart data={data} layout="vertical" margin={{ top: 5, right: 20, left: 40, bottom: 5 }}>
-            {/* CORRECTED: The tickFormatter now correctly formats the value as millions */}
             <XAxis type="number" stroke="#9ca3af" tickFormatter={(value) => `$${value}M`} />
             <YAxis type="category" dataKey="Division" stroke="#9ca3af" width={100} />
-            {/* CORRECTED: The formatter now displays the profit value correctly without dividing it */}
             <Tooltip 
                 contentStyle={{ backgroundColor: '#374151', border: 'none' }} 
                 formatter={(value) => `$${value.toFixed(2)}M`} 
@@ -106,7 +102,6 @@ const EmployeeDistributionChart = ({ data }) => {
                  <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100}>
                     {data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)}
                  </Pie>
-                 {/* CORRECTED: The formatter now explicitly defines the tooltip's content */}
                  <Tooltip 
                     contentStyle={{ backgroundColor: '#374151', border: 'none' }}
                     formatter={(value, name) => [`${value} Employees`, name]}
