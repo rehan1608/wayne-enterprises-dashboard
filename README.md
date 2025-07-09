@@ -1,10 +1,8 @@
-````markdown
+
 <div align="center">
-  <img src="https://i.imgur.com/g5hA0P4.png" alt="Wayne Enterprises Logo" width="150"/>
   <h1>Wayne Enterprises Business Intelligence Dashboard</h1>
   <p>
     A full-stack data visualization dashboard providing critical insights into the operations of Wayne Enterprises.<br/>
-    <a href="#"><strong>Explore the Project »</strong></a>
   </p>
 </div>
 
@@ -77,7 +75,7 @@ Make sure you have the following installed:
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<YOUR-USERNAME>/wayne-enterprises-dashboard.git
+git clone https://github.com/rehan1608/wayne-enterprises-dashboard.git
 cd wayne-enterprises-dashboard
 ````
 
@@ -143,4 +141,3 @@ npm run dev
 <div align="center">
   🎉 Thank you for exploring the Wayne Enterprises BI Dashboard!
 </div>
-```
