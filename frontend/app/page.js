@@ -1,4 +1,3 @@
-// app/page.js
 import DashboardClient from './components/DashboardClient';
 
 export default function Dashboard() {
